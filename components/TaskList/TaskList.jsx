@@ -2,7 +2,7 @@ import React from 'react'
 
 function TaskList() {
   return (
-    <div id='tasklist' className='h-[55%] flex flex-row gap-5 w-full py-5 mt-10'>
+    <div id='tasklist' className='h-[55%] overflow-x-auto flex flex-row gap-5 w-full py-5 mt-10'>
       <div className='h-full flex-shrink-0 w-[300px] bg-red-500 rounded-xl'>
         <div className='flex justify-between items-center p-3'>
           <h3 className='bg-red-600 px-3 py-1 text-sm rounded text-white'>High</h3>
