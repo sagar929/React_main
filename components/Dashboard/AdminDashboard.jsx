@@ -4,6 +4,10 @@ import AllTask from '../../other/AllTask';
 import Login   from '../Auth/Login';
 
 const AdminDashboard = () => {
+  const logOut = () => {
+    localStorage.removeItem('LoggedInUser');
+    window.location.reload(); // ✅ works immediately
+  };
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
@@ -15,7 +19,7 @@ const AdminDashboard = () => {
             <span className="ml-2 text-xl">👋</span>
           </div>
         </div>
-        <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        <button onClick={logOut} className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
           Log Out
         </button>
       </div>

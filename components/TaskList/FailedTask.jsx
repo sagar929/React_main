@@ -14,7 +14,7 @@ const FailedTask = () => {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus officiis quibusdam suscipit.
     </p>
     <div className='mt-5'>
-        <button className='w-full bg-red-900'>Task Failed</button>
+        <button className='w-full rounded-2xl bg-red-900'>Task Failed</button>
     </div>
   </div>
   )
