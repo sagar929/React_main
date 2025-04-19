@@ -13,13 +13,14 @@ function App() {
   
 
   // useEffect(()=>{
-  //   if(authData){
-  //     const loggedInUser = localStorage.getItem("LoggedInUser")
+  //     const loggedInUser = localStorage.getItem('LoggedInUser') 
+
   //     if(loggedInUser){
-  //       setUser(loggedInUser.role)
+  //       const userData  = JSON.parse(loggedInUser)
+  //       setUser(userData.role)
+  //       setLoggedInUser(userData.data)
   //     }
-  //   }
-  // },[authData])
+  // },[])
  
   const handleLogin = (email, password) => {
     if (email === 'admin@me.com' && password === '123') {
@@ -29,9 +30,9 @@ function App() {
     } else if (authData) {
       const employee =  authData.employees.find((e) => email == e.email && e.password == password)
       if(employee){
-        setUser('employee');
+        setUser( 'employee');
         setLoggedInUser(employee)
-        localStorage.setItem('LoggedInUser',JSON.stringify({role:'employee'}))
+        localStorage.setItem('LoggedInUser',JSON.stringify({role:'employee',data:employee}))
       }
       
     } else {
